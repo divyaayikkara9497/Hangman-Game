@@ -62,17 +62,13 @@ var wordBank = ["wizard" , "wand" , "potter"];
 				if (correctGuess === randomWord.length) {
 					winCounter++;
 					document.getElementById("wins").innerHTML = (winCounter);
-					 alert("Winner!");
+					 alert("Yer a wizard!");
 					 startgame();
-					 underScores = [];
-					 wrongLetter = [];
 				}
 
 				else if (guessLetter === 0) {
-					alert("Loser");
+					alert("You lost muggle!");
 					startgame();
-					underScores = [];
-					wrongLetter = [];
 				}
 			}
 
