@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	
+</head>
+<body>
+<body>
+
+<div class="container">
+
+	<div class="jumbotron bg-primary text-center" id="header">
+		<h1>Weclome to Hangman Game!</h1>
+	</div>
+
+	<div class="row">
+
+	<div class="col-sm-6" id="imagebody">
+			<div class="well text-center">
+				<div>
+					<img class="img-responsive" src="./assets/images/harrypotter.gif">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6" id="gamebody">
+				<div class="panel-heading">Let's Play!</div>
+				<div class="panel-body">
+					<p>
+						Press any key to get started! 
+						
+						<br><br>
+
+						(Hint: The answer is on your left!)
+
+						<br>
+
+						<p> Wins = <span id="wins"> 0 </span></p>
+						
+						<p> You have <span id="lives"> 10 </span> lifes left </p>
+
+						<p id="word" type="text"> _ _ _ _ _ </p>
+
+						<p id="letters"> Letters already guessed </p>
+						<div id="wrong"></div>
+					</p> 
+					
+				</div>
+			</div>
+		</div>
+</div>
+</div>
+
+<script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>
+
