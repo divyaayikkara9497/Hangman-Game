@@ -2,7 +2,7 @@ var wordBank = ["wizard" , "wand" , "potter"];
 			var wins = 0;
 			var loss = 0;
 			var wrongLetter = [];
-			var correctGuess = [];
+			var correctGuess = 0;
 			var guessLetter = 10;
 			var underScores = [];
 			var userGuess;
@@ -41,7 +41,7 @@ var wordBank = ["wizard" , "wand" , "potter"];
 							//document.getElementById("word").innerHTML = correctGuess;
 							underScores[i] = userGuess;
 							document.getElementById("word").innerHTML = underScores.join(" ");
-							winCounter ++;
+							correctGuess ++;
 							winlose();
 
 						}	
@@ -59,17 +59,20 @@ var wordBank = ["wizard" , "wand" , "potter"];
 
 			function winlose() {
 
-				if (winCounter === randomWord.length) {
+				if (correctGuess === randomWord.length) {
 					winCounter++;
 					document.getElementById("wins").innerHTML = (winCounter);
-
 					 alert("Winner!");
 					 startgame();
+					 underScores = [];
+					 wrongLetter = [];
 				}
 
 				else if (guessLetter === 0) {
 					alert("Loser");
 					startgame();
+					underScores = [];
+					wrongLetter = [];
 				}
 			}
 
