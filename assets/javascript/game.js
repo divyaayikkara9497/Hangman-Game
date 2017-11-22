@@ -11,7 +11,6 @@ var wordBank = ["wizard" , "wand" , "potter"];
 
 			function startgame() {
 				randomWord = wordBank[Math.floor(Math.random()*wordBank.length)];
-				
 
 				for (var i = 0; i < randomWord.length; i++) {
 					underScores.push(" _ ");
@@ -63,16 +62,26 @@ var wordBank = ["wizard" , "wand" , "potter"];
 					winCounter++;
 					document.getElementById("wins").innerHTML = (winCounter);
 					 alert("Yer a wizard!");
-					 startgame();
+					 restart();
 				}
 
 				else if (guessLetter === 0) {
 					alert("You lost muggle!");
-					startgame();
+					restart();
 				}
 			}
 
+			function restart() {
+				guessLetter = 10;
+				underScores = [];
+				userGuess;
+				correctGuess = 0;
+				startgame();
+
+			}
 
 		startgame();
 
 		winlose();
+
+		restart();
