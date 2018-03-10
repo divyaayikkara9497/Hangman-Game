@@ -1,6 +1,5 @@
 # Hangman-Game
 
-======
 
 Play the Harry Potter themed game of Hangman! The app generates a random word based on the famous series and the user has to guess the word the app choose. 
 
